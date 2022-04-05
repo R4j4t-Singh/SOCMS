@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="@color/Background1"
+    app:cardUseCompatPadding="true">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/border"
+      android:orientation="vertical">
+
+      <TextView
+          android:textAlignment="center"
+          android:textColor="@color/Theme1"
+          android:text="100"
+          android:layout_weight="2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="25dp"
+          android:id="@+id/flat_number"/>
+
+      <TextView
+          android:textAlignment="center"
+          android:textSize="25dp"
+          android:textColor="@color/Theme1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="JENISH DESAI"
+          android:id="@+id/member_name"/>
+
+  </LinearLayout>
+
+</androidx.cardview.widget.CardView>
