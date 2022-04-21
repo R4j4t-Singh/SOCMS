@@ -64,12 +64,14 @@
                     android:orientation="vertical">
 
                     <TextView
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="FLAT NUMBER"
                         android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/flat_num"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="10dp"
@@ -88,12 +90,14 @@
                     android:orientation="vertical">
 
                     <TextView
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="WING"
                         android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/wing"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="10dp"

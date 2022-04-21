@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login1Activity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/Background1">
+
+
+    <TextView
+        android:textColor="@color/Theme1"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="USERNAME"
+        android:textSize="25dp"/>
+    <EditText
+        android:id="@+id/username"
+        android:textColorHint="@color/black"
+        android:textColor="@color/Theme1"
+        android:layout_margin="5dp"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Write user name"/>
+
+    <TextView
+        android:textColor="@color/Theme1"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="PASSWORD"
+        android:textSize="25dp"/>
+    <EditText
+        android:id="@+id/password"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Write Password"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/log_in"
+        android:text="LOG IN"/>
+
+</LinearLayout>
