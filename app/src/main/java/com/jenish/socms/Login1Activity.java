@@ -1,6 +1,7 @@
 package com.jenish.socms;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -25,8 +26,8 @@ public class Login1Activity extends AppCompatActivity {
  SharedPreferences.Editor editor;
  static String usernmae="",password="";
  EditText user,pass;
-  private static final String connurl = "http://192.168.238.241/login.php?";
-  Button button;
+  private static final String connurl = "http://192.168.233.241/login.php?";
+  CardView button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

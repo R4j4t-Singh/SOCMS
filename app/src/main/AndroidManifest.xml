@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOCMS">
         <activity
-            android:name=".Login1Activity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Profile"
@@ -22,7 +22,7 @@
             android:name=".Members"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Login1Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
