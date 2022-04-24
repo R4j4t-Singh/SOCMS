@@ -2,6 +2,7 @@ package com.jenish.socms;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,13 +21,15 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Login1Activity extends AppCompatActivity {
-
+ SharedPreferences preferences;
+ SharedPreferences.Editor editor;
  static String usernmae="",password="";
  EditText user,pass;
-  String connurl;
+  private static final String connurl = "http://192.168.238.241/login.php?";
   Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login1);
 
@@ -40,22 +45,20 @@ public class Login1Activity extends AppCompatActivity {
 
                 usernmae = user.getText().toString();
                 password = pass.getText().toString();
-
-                connurl= "https://10.0.2.2/login.php?username="+usernmae+"&password="+password;
                 fetchdata();
             }
         });
-
-
-
-
     }
 
     public  void  fetchdata(){
         class db extends AsyncTask<String,Void,String>{
 
             protected void onPostExecute(String data){
-                Log.d("lll", "iddddddddddddddddddddd"+data);
+                preferences = getSharedPreferences("Start",0);
+                Log.d("fg", data);
+                editor = preferences.edit();
+                editor.putString("data",data);
+                editor.apply();
             }
             @Override
             protected String doInBackground(String... strings) {
@@ -85,6 +88,6 @@ public class Login1Activity extends AppCompatActivity {
             }
         }
         db D = new db();
-        D.execute(connurl);
+        D.execute(connurl+"username="+usernmae+"&password="+password);
     }
 }

@@ -35,6 +35,7 @@
                 android:layout_height="150dp"
                 android:src="@drawable/profile" />
             <TextView
+                android:id="@+id/profile_name"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"

@@ -14,12 +14,12 @@ import java.util.List;
 public class Recycle_view extends RecyclerView.Adapter<Recycle_view.DATA_HOLDER> {
      Activity activity;
      List<DataClass> dataClassList;
-     int index;
 
-    public Recycle_view(Activity activity, List<DataClass> dataClassList,int index) {
+
+    public Recycle_view(Activity activity, List<DataClass> dataClassList) {
         this.activity = activity;
         this.dataClassList = dataClassList;
-        this.index=index;
+
     }
 
     @NonNull
@@ -32,13 +32,13 @@ public class Recycle_view extends RecyclerView.Adapter<Recycle_view.DATA_HOLDER>
 
     @Override
     public void onBindViewHolder(@NonNull Recycle_view.DATA_HOLDER holder, int position) {
-        holder.membername.setText(dataClassList.get(index).name);
-        holder.flat_number.setText(dataClassList.get(index).flat_number);
+        holder.membername.setText(dataClassList.get(position).getName());
+        holder.flat_number.setText(dataClassList.get(position).getFlat_ID());
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return dataClassList.size();
     }
 
     public class DATA_HOLDER extends RecyclerView.ViewHolder {
