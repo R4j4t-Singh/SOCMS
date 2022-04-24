@@ -20,6 +20,7 @@ public class Recycle_view extends RecyclerView.Adapter<Recycle_view.DATA_HOLDER>
         this.activity = activity;
         this.dataClassList = dataClassList;
 
+
     }
 
     @NonNull

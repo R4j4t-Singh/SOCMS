@@ -30,6 +30,7 @@ public class Members extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       // fetchdata();
 
 //        datalist.add(new DataClass("JENISH DESAI","101"));
 //        datalist.add(new DataClass("JIGYASHU GUPTA ","101"));
@@ -91,10 +92,10 @@ public class Members extends AppCompatActivity {
                 recycle_view1.setAdapter(new Recycle_view(Members.this,datalist));
             }
         });
-        fetchdata();
+
     }
 
-    public void fetchdata(){
+    public static  void fetchdata(){
         class db extends AsyncTask<String,Void,String>
         {
 
