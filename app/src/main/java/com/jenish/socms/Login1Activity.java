@@ -37,6 +37,7 @@ public class Login1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login1);
         Members.fetchdata();
+        Event.fetchdata();
         user = findViewById(R.id.username);
         pass = findViewById(R.id.password);
         button = findViewById(R.id.log_in);

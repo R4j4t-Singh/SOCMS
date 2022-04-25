@@ -44,6 +44,7 @@ public class Recycle_view extends RecyclerView.Adapter<Recycle_view.DATA_HOLDER>
 
     public class DATA_HOLDER extends RecyclerView.ViewHolder {
         TextView membername,flat_number;
+
         public DATA_HOLDER(@NonNull View itemView) {
             super(itemView);
             membername = itemView.findViewById(R.id.member_name);

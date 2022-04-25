@@ -25,7 +25,7 @@ import java.util.List;
 public class Members extends AppCompatActivity {
    public static RecyclerView recycle_view1;
    CardView winga,wingb,wingc,wingd,winge;
-    private static final String connurl ="http://192.168.233.241/member.php";
+    private static final String connurl ="http://192.168.175.241/member.php";
     public static List<DataClass> datalist = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {

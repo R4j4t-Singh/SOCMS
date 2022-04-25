@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    CardView Members,Profile,button;
+    CardView Members,Profile,button,Event;
 
 
     @Override
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Members = findViewById(R.id.member_card);
         Profile =findViewById(R.id.profile_card);
         button = findViewById(R.id.logout);
+        Event = findViewById(R.id.event_card);
 
 
         Members.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
                 finish();
 //                Intent intent = new Intent(MainActivity.this, Login1Activity.class);
 //                startActivity(intent);
+            }
+        });
+
+        Event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Event.class);
+               startActivity(intent);
             }
         });
 
