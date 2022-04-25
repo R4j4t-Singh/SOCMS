@@ -34,7 +34,7 @@ public class Event extends AppCompatActivity {
         event_recycle = findViewById(R.id.Event_recycler);
         event_recycle.setLayoutManager(new GridLayoutManager(Event.this,1));
         event_recycle.setAdapter(new Event_recyler(Event.this,EventList));
-        textView.setText(EventList.get(0).getEvent_date());
+
 
     }
 
@@ -67,7 +67,7 @@ public class Event extends AppCompatActivity {
 
                     while(line!=null) {
                         Event_Data_class data = gson.fromJson(line, Event_Data_class.class);
-                        EventList.add(new Event_Data_class(data.getEvent_ID(), data.getEvent_type(),data.getEvent_date(),data.getEvent_SOC()));
+                        EventList.add(new Event_Data_class(data.getEvent_ID(), data.getEvent_Type(),data.getEvent_Date(),data.getSociety_ID()));
                         line = br.readLine();
                     }
 

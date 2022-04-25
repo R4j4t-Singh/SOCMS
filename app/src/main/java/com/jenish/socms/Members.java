@@ -64,32 +64,56 @@ public class Members extends AppCompatActivity {
         wingb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ArrayList<DataClass> arrayList_sort = new ArrayList<>();
+                for (int i = 0; i < datalist.size(); i++) {
+                    if (datalist.get(i).getWing_ID().equals("S001B")) {
+                        arrayList_sort.add(datalist.get(i));
+                    }
+                }
                 recycle_view1.setLayoutManager(new GridLayoutManager(Members.this,2));
-                recycle_view1.setAdapter(new Recycle_view(Members.this,datalist));
+                recycle_view1.setAdapter(new Recycle_view(Members.this,arrayList_sort));
             }
         });
 
         wingc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ArrayList<DataClass> arrayList_sort = new ArrayList<>();
+                for (int i = 0; i < datalist.size(); i++) {
+                    if (datalist.get(i).getWing_ID().equals("S001C")) {
+                        arrayList_sort.add(datalist.get(i));
+                    }
+                }
                 recycle_view1.setLayoutManager(new GridLayoutManager(Members.this,2));
-                recycle_view1.setAdapter(new Recycle_view(Members.this,datalist));
+                recycle_view1.setAdapter(new Recycle_view(Members.this,arrayList_sort));
             }
         });
 
         wingd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ArrayList<DataClass> arrayList_sort = new ArrayList<>();
+                for (int i = 0; i < datalist.size(); i++) {
+                    if (datalist.get(i).getWing_ID().equals("S001D")) {
+                        arrayList_sort.add(datalist.get(i));
+                    }
+                }
                 recycle_view1.setLayoutManager(new GridLayoutManager(Members.this,2));
-                recycle_view1.setAdapter(new Recycle_view(Members.this,datalist));
+                recycle_view1.setAdapter(new Recycle_view(Members.this,arrayList_sort));
             }
         });
 
         winge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ArrayList<DataClass> arrayList_sort = new ArrayList<>();
+                for (int i = 0; i < datalist.size(); i++) {
+                    if (datalist.get(i).getWing_ID().equals("S001E")) {
+                        arrayList_sort.add(datalist.get(i));
+                    }
+                }
                 recycle_view1.setLayoutManager(new GridLayoutManager(Members.this,2));
-                recycle_view1.setAdapter(new Recycle_view(Members.this,datalist));
+                recycle_view1.setAdapter(new Recycle_view(Members.this,arrayList_sort));
             }
         });
 

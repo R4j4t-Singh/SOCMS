@@ -28,9 +28,9 @@ public class Event_recyler extends RecyclerView.Adapter<Event_recyler.Event_HoLD
 
     @Override
     public void onBindViewHolder(@NonNull Event_HoLDER holder, int position) {
-          holder.soc.setText(dataClassList.get(position).getEvent_SOC());
-        holder.type.setText(dataClassList.get(position).getEvent_type());
-        holder.date.setText(dataClassList.get(position).getEvent_date());
+          holder.soc.setText(dataClassList.get(position).getSociety_ID());
+        holder.type.setText(dataClassList.get(position).getEvent_Type());
+        holder.date.setText(dataClassList.get(position).getEvent_Date());
         holder.id.setText(dataClassList.get(position).getEvent_ID());
     }
 

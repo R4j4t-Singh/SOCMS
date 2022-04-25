@@ -56,12 +56,13 @@ public class Login1Activity extends AppCompatActivity {
                 username = user.getText().toString();
                 password = pass.getText().toString();
 
-                error_box.setText(username);
+
                 if (findAccount(username)) {
 
                     loginPrefsEditor = loginPreferences.edit();
                     loginPrefsEditor.putString("username", username);
                     loginPrefsEditor.putString("password", password);
+                    loginPrefsEditor.putInt("index",get_index);
                     loginPrefsEditor.commit();
 
                     Intent intent = new Intent(Login1Activity.this,MainActivity.class);
@@ -69,11 +70,18 @@ public class Login1Activity extends AppCompatActivity {
 
                        finish();
                 } else {
-//                  error_box.setText(username+"fuck"+Members.datalist.size());
+                error_box.setText("INVALID LOG IN!");
                 }
             }
         });
     }
+
+//    private boolean checkpassword(String password) {
+//        if(password=="12345"){
+//            return  true;
+//        }
+//        return  false;
+//    }
 
     public  void  fetchdata(){
         class db extends AsyncTask<String,Void,String>{

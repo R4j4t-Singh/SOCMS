@@ -94,10 +94,11 @@
 
 
         <TextView
+            android:layout_margin="10dp"
             android:id="@+id/error_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textColor="#E41111"/>
     </LinearLayout>
 

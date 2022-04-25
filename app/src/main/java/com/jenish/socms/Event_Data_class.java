@@ -1,28 +1,28 @@
 package com.jenish.socms;
 
 public class Event_Data_class {
-    String Event_type,Event_ID,Event_date,Event_SOC;
+    String Event_Type,Event_ID,Event_Date,Society_ID;
 
-    public Event_Data_class(String event_ID, String event_type, String event_date, String event_SOC) {
-        Event_type = event_type;
-        Event_ID = event_ID;
-        Event_date = event_date;
-        Event_SOC = event_SOC;
+    public Event_Data_class(String Event_ID, String Event_Type, String Event_Date, String Society_ID) {
+        this.Event_Type = Event_Type;
+        this.Event_ID = Event_ID;
+        this.Event_Date = Event_Date;
+        this.Society_ID = Society_ID;
     }
 
-    public String getEvent_type() {
-        return Event_type;
+    public String getEvent_Type() {
+        return Event_Type;
     }
 
     public String getEvent_ID() {
         return Event_ID;
     }
 
-    public String getEvent_date() {
-        return Event_date;
+    public String getEvent_Date() {
+        return Event_Date;
     }
 
-    public String getEvent_SOC() {
-        return Event_SOC;
+    public String getSociety_ID() {
+        return Society_ID;
     }
 }
