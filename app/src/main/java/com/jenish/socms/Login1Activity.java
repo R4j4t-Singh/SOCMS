@@ -30,6 +30,7 @@ public class Login1Activity extends AppCompatActivity {
  EditText user,pass;
  TextView error_box,account;
   private static final String connurl = "http://192.168.195.241/login.php?";
+
   CardView button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,13 +66,7 @@ public class Login1Activity extends AppCompatActivity {
 //                    loginPrefsEditor.putInt("index",get_index);
 //                    loginPrefsEditor.commit();
 //
-                    Intent intent = new Intent(Login1Activity.this,MainActivity.class);
-                    startActivity(intent);
-//
-//                       finish();
-//                } else {
-//                error_box.setText("INVALID LOG IN!");
-//                }
+
             }
         });
 
@@ -96,12 +91,21 @@ public class Login1Activity extends AppCompatActivity {
         class db extends AsyncTask<String,Void,String>{
 
             protected void onPostExecute(String data){
-                preferences = getSharedPreferences("Start",0);
-                Log.d("fg", data);
-                editor = preferences.edit();
-                editor.putString("data",data);
-                editor.apply();
+                try{
+                    if(data.equals("")){error_box.setText("INVALID LOG IN!");}
+                }catch (NullPointerException e){
+                    error_box.setText("INVALID LOG IN!");
+                    return;
+                }
 
+
+                    preferences = getSharedPreferences("Start", 0);
+                    Log.d("fg", data);
+                    editor = preferences.edit();
+                    editor.putString("data", data);
+                    editor.apply();
+                    Intent intent = new Intent(Login1Activity.this, MainActivity.class);
+                    startActivity(intent);
 
             }
             @Override

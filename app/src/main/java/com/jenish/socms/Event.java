@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Event extends AppCompatActivity {
-    private static final String connurl ="http://192.168.175.241/event.php";
+    private static final String connurl ="http://192.168.195.241/event.php";
     public static List<Event_Data_class> EventList = new ArrayList<>();
     RecyclerView event_recycle;
     TextView textView;
@@ -29,12 +29,12 @@ public class Event extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
+        EventList.clear();
         fetchdata();
         textView = findViewById(R.id.test);
         event_recycle = findViewById(R.id.Event_recycler);
         event_recycle.setLayoutManager(new GridLayoutManager(Event.this,1));
         event_recycle.setAdapter(new Event_recyler(Event.this,EventList));
-        EventList.clear();
 
     }
 

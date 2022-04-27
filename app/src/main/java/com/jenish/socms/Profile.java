@@ -16,7 +16,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Profile extends AppCompatActivity {
-     TextView Name,Wing_ID,Flat_ID;
+     TextView Name,Wing_ID,Flat_ID,Contact;
 
 
     @Override
@@ -26,6 +26,7 @@ public class Profile extends AppCompatActivity {
         Wing_ID = findViewById(R.id.wing);
         Flat_ID = findViewById(R.id.flat_num);
         Name = findViewById(R.id.profile_name);
+        Contact = findViewById(R.id.contact);
 
        SharedPreferences preferences = getSharedPreferences("Start",0);
 //       int index = preferences.getInt("index",0);
@@ -37,6 +38,7 @@ public class Profile extends AppCompatActivity {
         Name.setText(data.getName());
         Wing_ID.setText(data.getWing_ID());
         Flat_ID.setText(data.getFlat_ID());
+        Contact.setText(data.getContact());
 
 //        Name.setText(Members.datalist.get(index).getName());
 //        Wing_ID.setText(Members.datalist.get(index).getWing_ID());

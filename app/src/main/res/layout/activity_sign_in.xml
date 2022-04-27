@@ -89,7 +89,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/white"
                 android:backgroundTintMode="@color/white"
-                android:hint="DD/MM/YYYY"
+                android:hint="YYYY-MM-DD"
                 android:inputType="date"
                 android:padding="8dp"
                 android:shadowColor="@color/white"

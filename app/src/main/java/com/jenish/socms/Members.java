@@ -81,6 +81,7 @@ public class Members extends AppCompatActivity {
         wingc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fetchdata();
                 ArrayList<DataClass> arrayList_sort = new ArrayList<>();
                 for (int i = 0; i < datalist.size(); i++) {
                     if (datalist.get(i).getWing_ID().equals("S001C")) {
@@ -89,12 +90,14 @@ public class Members extends AppCompatActivity {
                 }
                 recycle_view1.setLayoutManager(new GridLayoutManager(Members.this,2));
                 recycle_view1.setAdapter(new Recycle_view(Members.this,arrayList_sort));
+                datalist.clear();
             }
         });
 
         wingd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fetchdata();
                 ArrayList<DataClass> arrayList_sort = new ArrayList<>();
                 for (int i = 0; i < datalist.size(); i++) {
                     if (datalist.get(i).getWing_ID().equals("S001D")) {
@@ -103,12 +106,14 @@ public class Members extends AppCompatActivity {
                 }
                 recycle_view1.setLayoutManager(new GridLayoutManager(Members.this,2));
                 recycle_view1.setAdapter(new Recycle_view(Members.this,arrayList_sort));
+                datalist.clear();
             }
         });
 
         winge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fetchdata();
                 ArrayList<DataClass> arrayList_sort = new ArrayList<>();
                 for (int i = 0; i < datalist.size(); i++) {
                     if (datalist.get(i).getWing_ID().equals("S001E")) {
@@ -117,6 +122,7 @@ public class Members extends AppCompatActivity {
                 }
                 recycle_view1.setLayoutManager(new GridLayoutManager(Members.this,2));
                 recycle_view1.setAdapter(new Recycle_view(Members.this,arrayList_sort));
+                datalist.clear();
             }
         });
 
