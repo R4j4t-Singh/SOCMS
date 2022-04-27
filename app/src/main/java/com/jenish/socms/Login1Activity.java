@@ -28,50 +28,59 @@ public class Login1Activity extends AppCompatActivity {
  static String username="",password="";
  public static int get_index;
  EditText user,pass;
- TextView error_box;
-  private static final String connurl = "http://192.168.233.241/login.php?";
+ TextView error_box,account;
+  private static final String connurl = "http://192.168.195.241/login.php?";
   CardView button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login1);
-        Members.fetchdata();
-        Event.fetchdata();
+      //  Members.fetchdata();
+     //   Event.fetchdata();
         user = findViewById(R.id.username);
         pass = findViewById(R.id.password);
         button = findViewById(R.id.log_in);
         error_box = findViewById(R.id.error_box);
+        account = findViewById(R.id.new_account);
 
-        loginPreferences = getSharedPreferences("loginPrefs", 0);
-
-        if (!loginPreferences.getString("username", "").matches(username)) {
+      //  loginPreferences = getSharedPreferences("loginPrefs", 0);
+        preferences = getSharedPreferences("Start",0);
+        if (preferences.contains("data")) {
             startActivity(new Intent(Login1Activity.this,MainActivity.class) );
             finish();
         }
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                fetchdata();
                 username = user.getText().toString();
                 password = pass.getText().toString();
+                fetchdata();
 
-
-                if (findAccount(username)) {
-
-                    loginPrefsEditor = loginPreferences.edit();
-                    loginPrefsEditor.putString("username", username);
-                    loginPrefsEditor.putString("password", password);
-                    loginPrefsEditor.putInt("index",get_index);
-                    loginPrefsEditor.commit();
-
+//                if (findAccount(username)) {
+//
+//                    loginPrefsEditor = loginPreferences.edit();
+//                    loginPrefsEditor.putString("username", username);
+//                    loginPrefsEditor.putString("password", password);
+//                    loginPrefsEditor.putInt("index",get_index);
+//                    loginPrefsEditor.commit();
+//
                     Intent intent = new Intent(Login1Activity.this,MainActivity.class);
                     startActivity(intent);
+//
+//                       finish();
+//                } else {
+//                error_box.setText("INVALID LOG IN!");
+//                }
+            }
+        });
 
-                       finish();
-                } else {
-                error_box.setText("INVALID LOG IN!");
-                }
+
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login1Activity.this,SignInActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -108,6 +117,7 @@ public class Login1Activity extends AppCompatActivity {
                 try {
                     conn = (HttpURLConnection)url.openConnection();
                 }catch (IOException e){
+                    error_box.setText("INVALID LOG IN!");
                     return  e.getMessage();
                 }
 

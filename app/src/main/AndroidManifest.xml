@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SOCMS"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".SignInActivity"
+            android:exported="false" />
+        <activity
             android:name=".Event"
             android:exported="false" />
         <activity

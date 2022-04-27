@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences preferences =getSharedPreferences("loginPrefs",0);
+                SharedPreferences preferences =getSharedPreferences("Start",0);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.clear();
                 editor.apply();

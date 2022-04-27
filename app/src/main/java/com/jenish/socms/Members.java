@@ -25,12 +25,12 @@ import java.util.List;
 public class Members extends AppCompatActivity {
    public static RecyclerView recycle_view1;
    CardView winga,wingb,wingc,wingd,winge;
-    private static final String connurl ="http://192.168.175.241/member.php";
+    private static final String connurl ="http://192.168.195.241/member.php";
     public static List<DataClass> datalist = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // fetchdata();
+
 
 //        datalist.add(new DataClass("JENISH DESAI","101"));
 //        datalist.add(new DataClass("JIGYASHU GUPTA ","101"));
@@ -49,7 +49,7 @@ public class Members extends AppCompatActivity {
         winga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                fetchdata();
                 ArrayList<DataClass> arrayList_sort = new ArrayList<>();
                 for (int i = 0; i < datalist.size(); i++) {
                     if (datalist.get(i).getWing_ID().equals("S001A")) {
@@ -58,12 +58,14 @@ public class Members extends AppCompatActivity {
                 }
                 recycle_view1.setLayoutManager(new GridLayoutManager(Members.this,2));
                 recycle_view1.setAdapter(new Recycle_view(Members.this,  arrayList_sort));
+                datalist.clear();
             }
         });
 
         wingb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fetchdata();
                 ArrayList<DataClass> arrayList_sort = new ArrayList<>();
                 for (int i = 0; i < datalist.size(); i++) {
                     if (datalist.get(i).getWing_ID().equals("S001B")) {
@@ -72,6 +74,7 @@ public class Members extends AppCompatActivity {
                 }
                 recycle_view1.setLayoutManager(new GridLayoutManager(Members.this,2));
                 recycle_view1.setAdapter(new Recycle_view(Members.this,arrayList_sort));
+                datalist.clear();
             }
         });
 

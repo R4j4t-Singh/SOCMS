@@ -100,6 +100,15 @@
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:textColor="#E41111"/>
+        <TextView
+            android:id="@+id/new_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:text="Don't have account ? SIGN UP"/>
+
     </LinearLayout>
 
 

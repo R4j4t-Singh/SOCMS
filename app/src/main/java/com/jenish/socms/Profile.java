@@ -27,20 +27,20 @@ public class Profile extends AppCompatActivity {
         Flat_ID = findViewById(R.id.flat_num);
         Name = findViewById(R.id.profile_name);
 
-       SharedPreferences preferences = getSharedPreferences("loginPrefs",0);
-       int index = preferences.getInt("index",0);
-//        String  datan = preferences.getString("data","");
-//
-//        Gson gson = new Gson();
-//        DataClass data = gson.fromJson(datan,DataClass.class);
-//
-//        Name.setText(data.getName());
-//        Wing_ID.setText(data.getWing_ID());
-//        Flat_ID.setText(data.getFlat_ID());
+       SharedPreferences preferences = getSharedPreferences("Start",0);
+//       int index = preferences.getInt("index",0);
+        String  datan = preferences.getString("data","");
 
-        Name.setText(Members.datalist.get(index).getName());
-        Wing_ID.setText(Members.datalist.get(index).getWing_ID());
-        Flat_ID.setText(Members.datalist.get(index).getFlat_ID());
+        Gson gson = new Gson();
+        DataClass data = gson.fromJson(datan,DataClass.class);
+
+        Name.setText(data.getName());
+        Wing_ID.setText(data.getWing_ID());
+        Flat_ID.setText(data.getFlat_ID());
+
+//        Name.setText(Members.datalist.get(index).getName());
+//        Wing_ID.setText(Members.datalist.get(index).getWing_ID());
+//        Flat_ID.setText(Members.datalist.get(index).getFlat_ID());
     }
 
 }

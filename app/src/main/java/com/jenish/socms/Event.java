@@ -29,12 +29,12 @@ public class Event extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
-
+        fetchdata();
         textView = findViewById(R.id.test);
         event_recycle = findViewById(R.id.Event_recycler);
         event_recycle.setLayoutManager(new GridLayoutManager(Event.this,1));
         event_recycle.setAdapter(new Event_recyler(Event.this,EventList));
-
+        EventList.clear();
 
     }
 
