@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     CardView Members,Profile,button,Event;
@@ -17,11 +18,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Members = findViewById(R.id.member_card);
         Profile =findViewById(R.id.profile_card);
         button = findViewById(R.id.logout);
         Event = findViewById(R.id.event_card);
+
+
 
 
         Members.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                startActivity(intent);
             }
         });
+
+
+
 
     }
 }

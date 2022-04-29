@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,12 +19,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class SignInActivity extends AppCompatActivity {
-EditText username,password,member_id,flat_id,wing_id,dob;
-String user_sign,pass_sign,mem_id_sign,flat_id_sign,wing_id_sign,dob_sign;
+EditText username,password,member_id,flat_id,wing_id,dob,mobile;
+String user_sign,pass_sign,mem_id_sign,flat_id_sign,wing_id_sign,dob_sign,mobile_no;
 TextView test;
 CardView sign_button;
-private static final String connurl = "http://192.168.195.241/signup.php?";
+private static final String connurl = "https://socms.000webhostapp.com/signup.php?";
     @Override
+    //*NfpzSf^MYV$Ll^gsrLc
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
@@ -34,18 +36,26 @@ private static final String connurl = "http://192.168.195.241/signup.php?";
         wing_id = findViewById(R.id.wing_id_sign_up);
         dob = findViewById(R.id.DOB_SIGN_UP);
         test = findViewById(R.id.testid);
-
+        mobile = findViewById(R.id.mobile_SIGN_UP);
        sign_button.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
+
+
                user_sign = username.getText().toString();
                pass_sign = password.getText().toString();
 
                flat_id_sign = flat_id.getText().toString();
                wing_id_sign = wing_id.getText().toString();
                dob_sign = dob.getText().toString();
+               mobile_no = mobile.getText().toString();
 
-               fetchdata();
+               if(user_sign.isEmpty()||pass_sign.isEmpty()||flat_id_sign.isEmpty()||wing_id_sign.isEmpty()||dob_sign.isEmpty()||mobile_no.isEmpty()){
+                   Toast.makeText(SignInActivity.this, "Fill All Fields", Toast.LENGTH_SHORT).show();
+               }else{
+                   fetchdata();
+               }
+
            }
        });
     }
@@ -80,6 +90,6 @@ private static final String connurl = "http://192.168.195.241/signup.php?";
             }
         }
         db D = new db();
-        D.execute(connurl+"username="+user_sign+"&password="+pass_sign+"&flatID="+flat_id_sign+"&wingID="+wing_id_sign+"&dob="+dob_sign);
+        D.execute(connurl+"username="+user_sign+"&password="+pass_sign+"&flatID="+flat_id_sign+"&wingID="+wing_id_sign+"&dob="+dob_sign+"&mobileno="+mobile_no);
     }
 }

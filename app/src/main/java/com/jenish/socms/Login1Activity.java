@@ -29,7 +29,7 @@ public class Login1Activity extends AppCompatActivity {
  public static int get_index;
  EditText user,pass;
  TextView error_box,account;
-  private static final String connurl = "http://192.168.195.241/login.php?";
+  private static final String connurl = "https://socms.000webhostapp.com/login.php?";
 
   CardView button;
     @Override

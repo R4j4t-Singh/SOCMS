@@ -13,9 +13,10 @@
         android:gravity="center"
         android:background="@color/Theme1">
         <TextView
+            android:id="@+id/huehue"
             android:textColor="@color/black"
-            android:textSize="35dp"
             android:text="HOME"
+            android:textSize="35dp"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

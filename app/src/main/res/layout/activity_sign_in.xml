@@ -149,6 +149,31 @@
                 android:textColorHint="@color/white"
                 android:textSize="25dp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:text="Mobile No."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/mobile_SIGN_UP"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/border"
+                android:backgroundTint="@color/white"
+                android:backgroundTintMode="@color/white"
+                android:hint="7900923945"
+                android:padding="8dp"
+                android:shadowColor="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/Theme1"
+                android:textColorHint="@color/white"
+                android:textSize="25dp" />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -170,6 +195,8 @@
                         android:textColor="@color/Theme1"
                         android:textSize="30dp" />
                 </androidx.cardview.widget.CardView>
+
+
 
 
 

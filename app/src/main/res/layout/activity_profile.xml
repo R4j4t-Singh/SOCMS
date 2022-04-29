@@ -23,27 +23,30 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="405dp">
+
         <LinearLayout
 
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:orientation="vertical">
+
             <ImageView
-                android:layout_marginTop="45dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45dp"
                 android:src="@drawable/profile" />
+
             <TextView
                 android:id="@+id/profile_name"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
                 android:text="Wiliam Snoe"
                 android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="21sp"/>
+                android:textSize="21sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
@@ -146,25 +149,25 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         android:layout_marginTop="45dp">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_baseline_email_24"
-                app:tint="@color/Theme1"/>
-            <TextView
-                android:textStyle="bold"
-                android:textColor="@color/Theme1"
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:text="Wiliam@gmail.com"/>
-        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingLeft="25dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <ImageView-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:src="@drawable/ic_baseline_email_24"-->
+<!--                app:tint="@color/Theme1"/>-->
+<!--            <TextView-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/Theme1"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingLeft="20dp"-->
+<!--                android:text="Wiliam@gmail.com"/>-->
+<!--        </LinearLayout>-->
         <LinearLayout
             android:layout_marginTop="25dp"
             android:orientation="horizontal"
@@ -226,6 +229,8 @@
                 android:paddingLeft="20dp"
                 android:text="Show all comments"/>
         </LinearLayout>
+
+
     </LinearLayout>
 
 
